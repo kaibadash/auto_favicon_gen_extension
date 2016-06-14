@@ -1,0 +1,12 @@
+{
+  "name": "backlog-benri",
+  "version": false,
+  "ambientDependencies": {
+    "jquery": "github:DefinitelyTyped/DefinitelyTyped/jquery/jquery.d.ts#e8f8e7471b8ca92ca417f8c878f64ae4d1067972",
+    "MediaStream": "github:DefinitelyTyped/DefinitelyTyped/webrtc/MediaStream.d.ts#e8f8e7471b8ca92ca417f8c878f64ae4d1067972",
+    "filesystem": "github:DefinitelyTyped/DefinitelyTyped/filesystem/filesystem.d.ts#e8f8e7471b8ca92ca417f8c878f64ae4d1067972",
+    "chrome": "github:DefinitelyTyped/DefinitelyTyped/chrome/chrome.d.ts#e8f8e7471b8ca92ca417f8c878f64ae4d1067972",
+    "filewriter": "github:DefinitelyTyped/DefinitelyTyped/filewriter/filewriter.d.ts#e8f8e7471b8ca92ca417f8c878f64ae4d1067972",
+    "es6-promise": "github:DefinitelyTyped/DefinitelyTyped/es6-promise/es6-promise.d.ts#e8f8e7471b8ca92ca417f8c878f64ae4d1067972"
+  }
+}

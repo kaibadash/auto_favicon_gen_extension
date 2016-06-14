@@ -1,0 +1,17 @@
+{
+  "name": "backlog-benri",
+  "private": true,
+  "dependencies": {
+    "gulp-zip": "^3.2.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-typescript": "",
+    "typescript": "^1.8.5",
+    "typings": "^0.7.11"
+  },
+  "engines": {
+    "node": ">=0.8.0"
+  }
+}
