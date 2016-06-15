@@ -2,7 +2,7 @@
 Chrome extention for favicon.
 It generate favicon if favicon doesn' exist.
 
-![screenshot](https://raw.githubusercontent.com/kaibadash/backlog_benri_chrome_extention/master/doc/README_ss01.png)
+![ss](https://raw.githubusercontent.com/kaibadash/auto_favicon_gen_extention/master/doc/favicon.png)
 
 
 # アプリケーションのプライバシーポリシー
