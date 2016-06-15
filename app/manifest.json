@@ -34,7 +34,6 @@
         "https://*/*"
       ],
       "js": [
-        "bower_components/jquery/dist/jquery.min.js",
         "scripts/contentscript.js"
       ],
       "run_at": "document_end",
