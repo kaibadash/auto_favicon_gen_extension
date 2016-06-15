@@ -1,5 +1,6 @@
 /// <reference path="../../typings/main.d.ts" />
 const size: number = 64;
+const gain: number = 0.8;
 
 class FaviconGenerator {
     static generate(title: String) {
@@ -13,7 +14,7 @@ class FaviconGenerator {
             var canvas: HTMLCanvasElement = document.createElement("canvas");
             canvas.width = size;
             canvas.height = size;
-            
+
             var context = canvas.getContext("2d");
             context.font = "normal " + (size/2) + "px sans-serif";
             context.fillStyle = FaviconGenerator.stringToBackgroundColor(title);
@@ -22,13 +23,13 @@ class FaviconGenerator {
             context.fillStyle = "white";
             context.fillText(title.charAt(0) + title.charAt(1), 0, size/2);
             context.fillText(title.charAt(2) + title.charAt(3), 0, size - 1);
-            
+
             var link = document.createElement('link');
             link.type = 'image/x-icon';
             link.rel = 'icon';
             console.log("data:" + canvas.toDataURL());
             link.href = canvas.toDataURL();
-            document.getElementsByTagName('head')[0].appendChild(link);           
+            document.getElementsByTagName('head')[0].appendChild(link);
         });
     }
 
@@ -39,11 +40,11 @@ class FaviconGenerator {
         var r = rc.charCodeAt(0) % 0xff;
         var g = gc.charCodeAt(0) % 0xff;
         var b = bc.charCodeAt(0) % 0xff;
-        if (r+g+b > 0xff) {
+        if (r+g+b > 0xff * 2) {
             // 明るめの色の場合暗くする
-            r /= 2;
-            g /= 2;
-            b /= 2;
+            r *= gain;
+            g *= gain;
+            b *= gain;
         }
         console.log("rgb:" + r + "," + g + "," + b);
         return "rgb(" + Math.floor(r) + "," + Math.floor(g) + "," + Math.floor(b) + ")";
