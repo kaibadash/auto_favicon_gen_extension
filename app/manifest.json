@@ -1,7 +1,7 @@
 {
   "name": "auto_favicon_gen",
   "short_name" : "auto_favicon_gen",
-  "version": "0.0.13",
+  "version": "0.0.1",
   "manifest_version": 2,
   "description": "Generate favicon if it doesn't exist",
   "icons": {
@@ -9,7 +9,6 @@
     "128": "images/icon-128.png"
   },
   "web_accessible_resources": [
-      "images/link.png"
   ],
   "default_locale": "ja",
   "background": {
@@ -23,10 +22,6 @@
     "http://*/*",
     "storage"
   ],
-  "options_ui": {
-    "page": "options.html",
-    "chrome_style": true
-  },
   "content_scripts": [
     {
       "matches": [

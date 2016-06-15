@@ -1,36 +1,37 @@
 /// <reference path="../../typings/main.d.ts" />
-const size: number = 64;
-const gain: number = 0.8;
+const SIZE: number = 64;
+const GAIN: number = 0.8;
 
 class FaviconGenerator {
     static generate(title: String) {
         FaviconGenerator.faviconExists((exists: Boolean) => {
             if (exists) {
-                console.log("favicon exists");
                 return;
             }
-            console.log("favicon is not found");
-            var faviconImage = document.createElement("img");
-            var canvas: HTMLCanvasElement = document.createElement("canvas");
-            canvas.width = size;
-            canvas.height = size;
-
-            var context = canvas.getContext("2d");
-            context.font = "normal " + (size/2) + "px sans-serif";
-            context.fillStyle = FaviconGenerator.stringToBackgroundColor(title);
-            context.fillRect(0, 0, size, size);
-            context.strokeStyle = "white";
-            context.fillStyle = "white";
-            context.fillText(title.charAt(0) + title.charAt(1), 0, size/2);
-            context.fillText(title.charAt(2) + title.charAt(3), 0, size - 1);
-
-            var link = document.createElement('link');
-            link.type = 'image/x-icon';
-            link.rel = 'icon';
-            console.log("data:" + canvas.toDataURL());
-            link.href = canvas.toDataURL();
-            document.getElementsByTagName('head')[0].appendChild(link);
+            FaviconGenerator.draw(title);
         });
+    }
+
+    private static draw(title: String) {
+        var faviconImage = document.createElement("img");
+        var canvas: HTMLCanvasElement = document.createElement("canvas");
+        canvas.width = SIZE;
+        canvas.height = SIZE;
+
+        var context = canvas.getContext("2d");
+        context.font = "normal " + (SIZE/2) + "px sans-serif";
+        context.fillStyle = FaviconGenerator.stringToBackgroundColor(title);
+        context.fillRect(0, 0, SIZE, SIZE);
+        context.strokeStyle = "white";
+        context.fillStyle = "white";
+        context.fillText(title.charAt(0) + title.charAt(1), 0, SIZE/2);
+        context.fillText(title.charAt(2) + title.charAt(3), 0, SIZE - 1);
+
+        var link = document.createElement('link');
+        link.type = 'image/x-icon';
+        link.rel = 'icon';
+        link.href = canvas.toDataURL();
+        document.getElementsByTagName('head')[0].appendChild(link);
     }
 
     private static stringToBackgroundColor(s: String) : String {
@@ -42,11 +43,10 @@ class FaviconGenerator {
         var b = bc.charCodeAt(0) % 0xff;
         if (r+g+b > 0xff * 2) {
             // 明るめの色の場合暗くする
-            r *= gain;
-            g *= gain;
-            b *= gain;
+            r *= GAIN;
+            g *= GAIN;
+            b *= GAIN;
         }
-        console.log("rgb:" + r + "," + g + "," + b);
         return "rgb(" + Math.floor(r) + "," + Math.floor(g) + "," + Math.floor(b) + ")";
     }
 
@@ -75,8 +75,6 @@ class FaviconGenerator {
         var xhr = new XMLHttpRequest();
         xhr.open("GET", "/favicon.ico", true);
         xhr.onload = () => {
-            console.log("xhr.readyState" + xhr.readyState);
-            console.log("xhr.status" + xhr.status);
             if (xhr.readyState == 4 && xhr.status == 404) {
                 callback(false);
             }
