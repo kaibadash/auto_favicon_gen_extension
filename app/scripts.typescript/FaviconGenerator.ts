@@ -35,19 +35,20 @@ class FaviconGenerator {
     }
 
     private static stringToBackgroundColor(s: String) : String {
-        var rc = s.length < 1 ? "0" : s[0];
-        var gc = s.length < 2 ? "0" : s[1];
-        var bc = s.length < 3 ? "0" : s[2];
-        var r = rc.charCodeAt(0) % 0xff;
-        var g = gc.charCodeAt(0) % 0xff;
-        var b = bc.charCodeAt(0) % 0xff;
-        if (r+g+b > 0xff * 2) {
+        var r = FaviconGenerator.fake_srand(s.charCodeAt(0)) % 0xff;
+        var g = FaviconGenerator.fake_srand(s.charCodeAt(1)) % 0xff;
+        var b = FaviconGenerator.fake_srand(s.charCodeAt(2)) % 0xff;
+        if (r + g + b > 0xff * 2) {
             // 明るめの色の場合暗くする
             r *= GAIN;
             g *= GAIN;
             b *= GAIN;
         }
         return "rgb(" + Math.floor(r) + "," + Math.floor(g) + "," + Math.floor(b) + ")";
+    }
+
+    private static fake_srand(seed: number) : number {
+        return Math.floor(Math.sin(seed) * 10000);
     }
 
     private static faviconExists(callback: ((exists: Boolean) => void)) {
