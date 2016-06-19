@@ -1,6 +1,6 @@
 # auto_favicon_gen_extention
-Chrome extention for favicon.
-It generate favicon if favicon doesn' exist.
+Chrome extention for favicon auto generation.
+It generates favicon if favicon doesn' exist.
 
 ![ss](https://raw.githubusercontent.com/kaibadash/auto_favicon_gen_extention/master/doc/favicon.png)
 
