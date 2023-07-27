@@ -1,5 +1,5 @@
 {
-  "name": "backlog-benri",
+  "name": "auto_favicon_gen_extention",
   "private": true,
   "dependencies": {
     "gulp-zip": "^3.2.0"
