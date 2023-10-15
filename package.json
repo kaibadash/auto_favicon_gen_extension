@@ -2,16 +2,15 @@
   "name": "auto_favicon_gen_extention",
   "private": true,
   "dependencies": {
-    "gulp-zip": "^3.2.0"
+    "gulp-zip": "^5.1.0"
   },
   "devDependencies": {
-    "gulp": "^3.9.1",
-    "gulp-concat": "^2.6.0",
-    "gulp-typescript": "",
-    "typescript": "^1.8.5",
-    "typings": "^0.7.11"
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-typescript": "^5.0.1",
+    "typescript": "^5.2.2"
   },
   "engines": {
-    "node": ">=0.8.0"
+    "node": ">=16.13.0"
   }
 }
