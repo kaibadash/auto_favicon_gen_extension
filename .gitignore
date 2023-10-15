@@ -10,3 +10,4 @@ app/scripts/*.js
 app/scripts/*.map
 *.pem
 *.zip
+storage
