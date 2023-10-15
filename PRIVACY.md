@@ -4,4 +4,4 @@ This app does not collect any personal information; it uses Google Analytics, bu
 
 # Japanese
 
-このアプリは個人情報を収集しません。Google Analytics を利用していますが、個人に個人情報は収集しません。
+このアプリは個人情報を収集しません。Google Analytics を利用していますが、個人情報は収集しません。
