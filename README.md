@@ -1,26 +1,27 @@
-# auto_favicon_gen_extention
-Chrome extention for favicon auto generation.
-It generates favicon if favicon doesn' exist.
+A browser extension to generate favicon if it doesn't exist.
 
-![ss](https://raw.githubusercontent.com/kaibadash/auto_favicon_gen_extention/master/doc/favicon.png)
+![image](https://raw.githubusercontent.com/kaibadash/auto_favicon_gen_extention/master/doc/favicon.png)
 
+## Setup
 
-# アプリケーションのプライバシーポリシー
- このアプリケーションは、個人情報を収集したり公開しません。
+```
+$ yarn
+```
 
-# Application privacy policy
- This application does not collect or publish any personal information.
+## Watch and build
 
-# How to develop
+```
+yarn dev chrome
+yarn dev firefox
+yarn dev opera
+yarn dev edge
+```
 
-- Install npm(node.js)
-- gulp install -g gulp
-- gulp build
+## Build extension
 
-```sh
-git clone git@github.com:kaibadash/auto_favicon_gen_extention.git
-cd auto_favicon_gen_extention
-npm install
-bower install
-gulp build
+```
+yarn build chrome
+yarn build firefox
+yarn build opera
+yarn build edge
 ```
