@@ -1,10 +1,11 @@
 {
   "appName": {
-    "message": "auto_favicon_gen",
-    "description": "Generate favicon if it doesn't exist"
+    "message": "auto_favicon_gen"
+  },
+  "appShortName": {
+    "message": "auto_favicon_gen"
   },
   "appDescription": {
-    "message": "auto_favicon_gen",
-    "description": "Generate favicon if it doesn't exist"
+    "message": "Generate favicon if it doesn't exist"
   }
 }

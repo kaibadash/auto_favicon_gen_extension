@@ -1,10 +1,11 @@
 {
   "appName": {
-    "message": "auto_favicon_gen",
-    "description": "Faviconが無かったら自動生成します"
+    "message": "auto_favicon_gen"
+  },
+  "appShortName": {
+    "message": "auto_favicon_gen"
   },
   "appDescription": {
-    "message": "auto_favicon_gen",
-    "description": "Faviconが無かったら自動生成します"
+    "message": "faviconが設定されていなければ作成します。"
   }
 }

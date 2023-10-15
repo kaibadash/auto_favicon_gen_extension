@@ -1,0 +1,26 @@
+.allWrapper .it-MdContent h1 {
+  color: #c35c5c;
+  border-bottom-color: #c35c5c;
+}
+
+.allWrapper .it-MdContent h2 {
+  color: #bf905d;
+  border-bottom-color: #bf905d;
+}
+
+.allWrapper .it-MdContent h3 {
+  color: #9b9b4c;
+}
+
+.allWrapper .it-MdContent h4 {
+  color: #4a944a;
+}
+
+.allWrapper .it-MdContent h5 {
+  color: #468a8a;
+}
+
+.allWrapper .it-MdContent h6 {
+  color: #6464a5;
+}
+

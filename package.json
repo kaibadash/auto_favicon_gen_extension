@@ -1,17 +1,52 @@
 {
-  "name": "backlog-benri",
-  "private": true,
+  "name": "auto_favicon_gen",
+  "version": "0.1.0",
+  "description": "Generate favicon if it doesn't exist",
+  "main": "",
+  "scripts": {
+    "dev": "webextension-toolbox dev",
+    "build": "webextension-toolbox build",
+    "lint": "eslint ./app/scripts --ext .ts --cache --format 'node_modules/eslint-formatter-friendly'",
+    "lint:fix": "yarn lint --fix",
+    "supported-browsers": "yarn browserslist",
+    "archive": "git archive HEAD -o storage/source.zip",
+    "type-check": "tsc",
+    "preinstall": "typesync || :"
+  },
   "dependencies": {
-    "gulp-zip": "^3.2.0"
+    "core-js": "3.8.1"
   },
   "devDependencies": {
-    "gulp": "^3.9.1",
-    "gulp-concat": "^2.6.0",
-    "gulp-typescript": "",
-    "typescript": "^1.8.5",
-    "typings": "^0.7.11"
+    "@babel/cli": "^7.11.6",
+    "@babel/core": "^7.11.6",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/preset-env": "^7.11.5",
+    "@babel/preset-typescript": "^7.8.3",
+    "@types/babel__core": "^7.1.10",
+    "@types/babel__preset-env": "^7.9.1",
+    "@types/chrome": "^0.0.127",
+    "@types/core-js": "2.5.4",
+    "@types/eslint": "^7.2.3",
+    "@types/eslint-plugin-prettier": "^3.1.0",
+    "@types/prettier": "^2.1.1",
+    "@types/webpack-bundle-analyzer": "^3.8.0",
+    "@typescript-eslint/eslint-plugin": "^4.4.0",
+    "@typescript-eslint/parser": "^4.4.0",
+    "babel-loader": "^8.0.6",
+    "eslint": "^7.10.0",
+    "eslint-config-prettier": "^7.1.0",
+    "eslint-formatter-friendly": "^7.0.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-prettier": "^3.1.4",
+    "fork-ts-checker-webpack-plugin": "^6.0.8",
+    "prettier": "^2.1.2",
+    "typescript": "^4.0.3",
+    "typesync": "^0.8.0",
+    "webextension-toolbox": "^3.0.0",
+    "webpack-bundle-analyzer": "^4.3.0"
   },
   "engines": {
-    "node": ">=0.8.0"
+    "node": ">=10",
+    "yarn": "^1.18.0"
   }
 }
