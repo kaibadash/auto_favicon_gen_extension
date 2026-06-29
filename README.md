@@ -11,17 +11,25 @@ $ yarn
 ## Watch and build
 
 ```
-yarn dev chrome
-yarn dev firefox
-yarn dev opera
-yarn dev edge
+yarn dev
 ```
+
+Load the unpacked extension from the `dist/` directory in `chrome://extensions`.
 
 ## Build extension
 
 ```
-yarn build chrome
-yarn build firefox
-yarn build opera
-yarn build edge
+yarn build
 ```
+
+The built extension is output to the `dist/` directory.
+
+## Package for the store
+
+Build and create a zip for uploading to the Chrome Web Store:
+
+```
+yarn zip
+```
+
+The zip is created at `storage/extension.zip` (with `manifest.json` at its root).

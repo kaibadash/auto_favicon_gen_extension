@@ -11,3 +11,5 @@ app/scripts/*.map
 *.pem
 *.zip
 storage
+.eslintcache
+
